@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url "https://kotlin.bintray.com/ktor"
+        }
+    }
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:5.2.0"
+    }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.multiplatform" apply false
+    id "org.jetbrains.kotlin.js" apply false
+}
+
+group 'org.feamor'
+
+allprojects {
+    group "com.feamor"
+    version "0.1.0"
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
